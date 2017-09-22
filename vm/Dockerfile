@@ -1,7 +1,9 @@
 FROM ubuntu
 
-WORKDIR /root
+ENV APP_PATH /root/csgo-server
 
-COPY . /root
+WORKDIR $APP_PATH
+
+COPY . $APP_PATH
 
 RUN ./deps.sh

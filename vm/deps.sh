@@ -1,5 +1,5 @@
 
-INSTALL_PATH=/root/vm
+INSTALL_PATH=/root/csgo-server/vm
 
 #Ubuntu requirements
 cd /etc/apt/sources.list.d || exit
