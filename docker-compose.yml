@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  web:
+    # Run image with as Classic Casual server
+    image: edenservers/docker-csgo
+    ports:
+      - "27015:27015"
+      - "27015:27015/udp"
+      - "1234:22"
+    environment:
+      - GAME_TYPE=0
+      - GAME_MODE=0
+      - MAPGROUP=mg_bomb
+      - MAP=de_dust2
+      - USERNAME=adwadwad
+      - PASSWORD=asdasdasdasd
