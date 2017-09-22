@@ -1,4 +1,6 @@
 
+INSTALL_PATH=/root/vm
+
 #Ubuntu requirements
 cd /etc/apt/sources.list.d || exit
 echo "deb http://old-releases.ubuntu.com/ubuntu/ raring main restricted universe multiverse" >ia32-libs-raring.list
@@ -15,11 +17,11 @@ wget http://media.steampowered.com/client/steamcmd_linux.tar.gz
 tar -xvzf steamcmd_linux.tar.gz
 
 apt-get install -y openssh-server rssh
-cp /usr/local/src/rssh.conf /etc/rssh.conf
+cp $INSTALL_PATH/rssh.conf /etc/rssh.conf
 
 #Server Start
 cd /server/csgo || exit
-cp /usr/local/src/start.sh /server/csgo/start.sh
-chmod 755 /server/csgo/start.sh
 
-source /usr/local/src/envs.sh
+ls $INSTALL_PATH
+cp $INSTALL_PATH/start.sh /server/csgo/start.sh
+chmod 755 /server/csgo/start.sh

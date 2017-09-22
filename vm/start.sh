@@ -1,5 +1,12 @@
 #!/bin/bash
 
+export GAME_TYPE=0
+export GAME_MODE=0
+export MAPGROUP=mg_bomb
+export MAP=de_dust2
+export USERNAME=edenservers
+export PASSWORD=edenservers
+
 #Setting up SFTP
 if ! id -u "$USERNAME" >/dev/null 2>&1; then
     PASSWORD=$(perl -e 'print crypt($ARGV[0], "password")' $PASSWORD)

@@ -1,7 +1,7 @@
 FROM ubuntu
 
-WORKDIR /usr/local/src
+WORKDIR /root
 
-COPY . /usr/local/src
+COPY . /root
 
 RUN ./deps.sh
