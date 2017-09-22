@@ -1,9 +1,14 @@
 FROM ubuntu
 
-ENV APP_PATH /root/csgo-server
+ENV APP_PATH /root/csgo-server/vm
 
 WORKDIR $APP_PATH
 
 COPY . $APP_PATH
 
-RUN ./deps.sh
+RUN ./linux-deps.sh
+
+RUN ./setup.sh
+
+CMD ['/server/csgo/start.sh']
+
